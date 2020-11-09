@@ -1,13 +1,12 @@
-@media (min-width: 750px) {
+@media (min-width: 850px) {
 	.tuner-container {
 		position : relative;
 		width : 760px;
-		height : 400px;
+		height : 200px;
     margin : auto;
     text-align: center;
     padding: 0px;
-    border-width: 0px;
-    border-image: none 100% / 1 / 0 stretch;
+    border: 1px solid #bed2de;
     font-size: 100%;
     background-attachment: scroll;
     background-image: none;
@@ -21,5 +20,18 @@
     box-shadow: none;
     display: block;
     overflow: visible;
-	}
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px;
+    position: bottom;
+  }
+
+  .note-button {
+    width: 80px;
+    background-color: #159957;
+    color: white;
+  }
 }

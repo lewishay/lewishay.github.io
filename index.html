@@ -1,16 +1,20 @@
 ---
 layout: mainTemplate
 ---
-<div>
-  <h1>200</h1>
-  <p><strong>Page found :)</strong></p>
-  <p>The requested page could be found.</p>
-</div>
+<h2>Guitar tuner</h2>
 <div class="tuner-container">
-  <button>E</button>
-  <button>A</button>
-  <button>D</button>
-  <button>G</button>
-  <button>B</button>
-  <button>e</button>
+  <div class="button-container">
+    <button class="note-button" onclick="playNote('E2')">E</button>
+    <audio id="note-E2" type="audio/mpeg" src="/assets/audio/note-E2.mp3" loop></audio>
+    <button class="note-button" onclick="playNote('A')">A</button>
+    <audio id="note-A" type="audio/mpeg" src="/assets/audio/note-A.mp3" loop></audio>
+    <button class="note-button" onclick="playNote('D')">D</button>
+    <audio id="note-D" type="audio/mpeg" src="/assets/audio/note-D.mp3" loop></audio>
+    <button class="note-button" onclick="playNote('G')">G</button>
+    <audio id="note-G" type="audio/mpeg" src="/assets/audio/note-G.mp3" loop></audio>
+    <button class="note-button" onclick="playNote('B')">B</button>
+    <audio id="note-B" type="audio/mpeg" src="/assets/audio/note-B.mp3" loop></audio>
+    <button class="note-button" onclick="playNote('E4')">e</button>
+    <audio id="note-E4" type="audio/mpeg" src="/assets/audio/note-E4.mp3" loop></audio>
+  </div>
 </div>
