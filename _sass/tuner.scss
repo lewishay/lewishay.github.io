@@ -1,37 +1,47 @@
-@media (min-width: 850px) {
-	.tuner-container {
-		position : relative;
-		width : 760px;
-		height : 200px;
-    margin : auto;
-    text-align: center;
-    padding: 0px;
-    border: 1px solid #bed2de;
-    font-size: 100%;
-    background-attachment: scroll;
-    background-image: none;
-    background-origin: padding-box;
-    background-clip: padding-box;
-    user-select: none;
-    cursor: default;
-    transform-origin: 0px 0px 0px;
-    left: 0px;
-    top: 0px;
-    box-shadow: none;
-    display: block;
-    overflow: visible;
-  }
+.tuner-container {
+  position : relative;
+  width : 96%;
+  margin : auto;
+  text-align: center;
+  padding: 10px;
+  border: 6px outset darkcyan;
+  font-size: 100%;
+  background-attachment: scroll;
+  background-image: none;
+  background-origin: padding-box;
+  background-clip: padding-box;
+  user-select: none;
+  cursor: default;
+  transform-origin: 0px 0px 0px;
+  left: 0px;
+  top: 0px;
+  box-shadow: none;
+  display: block;
+  overflow: visible;
+}
 
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 100px;
-    position: bottom;
-  }
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  position: bottom;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 10px;
+}
 
-  .note-button {
-    width: 80px;
-    background-color: #159957;
-    color: white;
-  }
+.note-button {
+  width: 90px;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  background-color: #159957;
+  color: white;
+  border: 2px outset black;
+}
+
+.note-button.select {
+  background-color: #38a2ba;
+}
+
+.note-button:focus {
+  outline: 1px double black;
 }
