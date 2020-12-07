@@ -14,3 +14,8 @@ function playNote(note) {
     audio.pause();
   }
 }
+
+var slider = document.getElementById("bpm-slider");
+slider.oninput = function() {
+  document.getElementById("current-bpm").innerHTML = this.value;
+} 

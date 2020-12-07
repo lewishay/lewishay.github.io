@@ -1,4 +1,4 @@
-.tuner-container {
+.section-container {
   position : relative;
   width : 96%;
   margin : auto;
@@ -7,7 +7,7 @@
   border: 6px outset darkcyan;
   font-size: 100%;
   background-attachment: scroll;
-  background-image: none;
+  background-color: #fffef3;
   background-origin: padding-box;
   background-clip: padding-box;
   user-select: none;
@@ -18,10 +18,12 @@
   box-shadow: none;
   display: block;
   overflow: visible;
+  margin-bottom: 2rem;
 }
 
-.button-container {
+.controls-container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   position: bottom;
   margin-left: 2vw;
@@ -29,13 +31,20 @@
   margin-bottom: 10px;
 }
 
-.note-button {
-  width: 90px;
-  margin-left: 0.5vw;
-  margin-right: 0.5vw;
+.button {
   background-color: #159957;
   color: white;
   border: 2px outset black;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+.note-button {
+  width: 90px;
+}
+
+#metronome-button {
+  width: 20%;
 }
 
 .note-button.select {
@@ -44,4 +53,31 @@
 
 .note-button:focus {
   outline: 1px double black;
+}
+
+#bpm-slider {
+  width: 75%;
+  margin-left: 1vw;
+  -webkit-appearance: none;
+  height: 3px;
+  background: #d3d3d3;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+#bpm-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: #159957;
+  cursor: pointer;
+}
+
+#bpm-slider::-moz-range-thumb {
+  width: 10px;
+  height: 25px;
+  background: #159957;
+  cursor: pointer;
 }
