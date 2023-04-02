@@ -1,11 +1,11 @@
 ---
 layout: mainTemplate
 ---
-<div class="tuner-container">
+<div class="box-container">
   <h2>Guitar tuner</h2>
   <p>Tune your guitar by ear to standard tuning.</p>
   <p>Press a button to play the displayed note. The note will loop until another note is played, or the same button is pressed again.</p>
-  <div class="button-container">
+  <div id="button-container">
     <button id="button-E2" class="note-button" onclick="playNote('E2')">E</button>
     <audio id="note-E2" type="audio/mpeg" src="/assets/audio/note-E2.mp3" loop></audio>
     <button id="button-A" class="note-button" onclick="playNote('A')">A</button>
@@ -19,4 +19,18 @@ layout: mainTemplate
     <button id="button-E4" class="note-button" onclick="playNote('E4')">e</button>
     <audio id="note-E4" type="audio/mpeg" src="/assets/audio/note-E4.mp3" loop></audio>
   </div>
+</div>
+<div class="box-container">
+  <h2>Metronome</h2>
+  <p>Press the button below to start or stop the metronome. Change the BPM value to adjust the speed.</p>
+    <button class="metronome-toggle margin-bottom" onclick="toggleMetronome()">Start/Stop</button>
+    <div class="margin-bottom">
+      <label for="bpm">BPM</label>
+      <input id="bpm" type="range" min="60" max="220" value="120" step="2">
+      <span id="bpm-value">120</span>
+    </div>
+    <div id="volume-container">
+      <label for="metronome-volume">Volume</label>
+      <input id="metronome-volume" type="range" min="0" max="100" value="100" step="5">
+    </div>
 </div>
