@@ -21,7 +21,7 @@ div, footer { background-color: inherit; }
 
 #unity-container { padding-top: 2rem; }
 
-#unity-canvas { border: 6px outset #008b8b; }
+#unity-canvas { border-color: #008b8b; border-width: 4px 8px; border-style: outset; }
 
 #unity-footer { display:inline-block; text-align: right; font-size: 11pt; }
 
