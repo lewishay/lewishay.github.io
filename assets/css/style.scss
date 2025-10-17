@@ -1,36 +1,209 @@
 ---
 ---
-/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 
-html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
 
-body { padding: 0; margin: 0; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; }
+h1 {
+  margin: 1.5rem 0 1.5rem 0;
+  font-size: 50px;
+}
 
-h1 { margin: 0; padding-top: 2rem; font-size: 50px; }
+a {
+  color: #57ddef
+}
 
-a { color: #4dc9c1; }
+ul {
+  text-align: left;
+  list-style-position: inside;
+}
 
-.gradient { color: #fff; text-align: center; background-color: #0e2422; height: 100vh; }
+hr {
+  width: 100%;
+  height: 0px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px 0 0 0;
+  margin: 0;
+}
 
-div, footer { background-color: inherit; }
+p.left {
+  text-align: left;
+}
 
-.site-footer { padding: 0rem 1rem 1rem; }
+.green {
+  background: linear-gradient(90deg, rgb(57, 174, 120) 0%, rgb(27, 119, 85) 40%, rgb(33, 87, 51) 100%);
+}
 
-.site-footer-owner { display: block; font-weight: bold; }
+.blue {
+  background: linear-gradient(90deg, rgba(56, 135, 177, 1) 0%, rgba(31, 70, 137, 1) 40%, rgba(31, 34, 99, 1) 100%);
+}
 
-#unity-container { padding-top: 2rem; }
+.purple {
+  background: linear-gradient(90deg, rgb(99, 115, 182) 0%, rgb(76, 54, 143) 40%, rgb(56, 15, 108) 100%);
+}
 
-#unity-canvas { border-color: #008b8b; border-width: 4px 8px; border-style: outset; }
+.main-container {
+  color: #fff;
+  text-align: center;
+}
 
-#unity-footer { display:inline-block; text-align: right; font-size: 11pt; }
+.project-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 0 auto;
+}
 
-#unity-fullscreen-button { cursor:pointer; float: right; width: 20px; height: 20px; margin-left:10px; background: url('../../TemplateData/fullscreen-button.png') no-repeat center; background-size: contain; }
+.slim-wrapper {
+  margin: 0 10vw 0 10vw;
+}
 
-#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
+.project-text {
+  margin: 0 2vw 0 2vw;
+  flex: 1;
+}
 
-#unity-logo { width: 154px; height: 130px; background: url('../../TemplateData/unity-logo-dark.png') no-repeat center }
+.project-media {
+  flex: 0 0 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('../../TemplateData/progress-bar-empty-dark.png') no-repeat center }
+.slim-wrapper .project-media {
+  flex: 0 0 35%;
+}
 
-#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('../../TemplateData/progress-bar-full-dark.png') no-repeat center }
+.project-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid black;
+}
+
+.image-text {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.slim-wrapper .project-image {
+  max-height: 650px;
+}
+
+.video-wrapper {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%; /* 9/16 = 0.5625 */
+}
+
+.project-video {
+  max-width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border: 1px solid black;
+}
+
+.spaced-list > li {
+  margin-bottom: 15px;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 1200px) {
+  .project-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .slim-wrapper {
+    margin: 0;
+  }
+
+  .project-media {
+    flex: 0 0 auto;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .project-image {
+    max-width: 90%;
+  }
+}
+
+footer {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  position: static;
+}
+
+.site-footer-owner {
+  display: block;
+  font-weight: bold;
+}
+
+#unity-container {
+  padding-top: 2rem;
+}
+
+#unity-canvas {
+  border-color: #57ddef;
+  border-width: 4px 8px;
+  border-style: outset;
+}
+
+#unity-footer {
+  display: inline-block;
+  text-align: right;
+  font-size: 11pt;
+}
+
+#unity-fullscreen-button {
+  cursor: pointer;
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  background: url('../images/fullscreen-button.png') no-repeat center;
+  background-size: contain;
+}
+
+#unity-loading-bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+#unity-logo {
+  width: 154px;
+  height: 130px;
+  background: url('../images/unity-logo-dark.png') no-repeat center;
+}
+
+#unity-progress-bar-empty {
+  width: 141px;
+  height: 18px;
+  margin-top: 10px;
+  margin-left: 6.5px;
+  background: url('../images/progress-bar-empty-dark.png') no-repeat center;
+}
+
+#unity-progress-bar-full {
+  width: 0%;
+  height: 18px;
+  margin-top: 10px;
+  background: url('../images/progress-bar-full-dark.png') no-repeat center;
+}
