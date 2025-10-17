@@ -1,113 +1,132 @@
 ---
 layout: mainTemplate
 ---
-<div id="unity-container" class="unity-desktop">
-    <canvas id="unity-canvas" width=1360 height=765 tabindex="-1"></canvas>
-    <div id="unity-loading-bar">
-    <div id="unity-logo"></div>
-    <div id="unity-progress-bar-empty">
-        <div id="unity-progress-bar-full"></div>
-    </div>
-    </div>
-    <div id="unity-warning"> </div>
-    <div id="unity-footer">
-        Fullscreen: <div id="unity-fullscreen-button"></div>
-    </div>
+<h1>Lewis Hay</h1>
+<h2>Portfolio of personal development projects</h2>
+
+<hr>
+
+<div class="project-container blue">
+	<div class="project-text">
+		<h2>BlueLime (2025)</h2>
+		<p>BlueLime is a music player application for Windows.</p>
+		<p class="left">
+			Features include:
+			<ul>
+				<li>Playback of local audio files, including changing playback speed and pitch</li>
+				<li>Responsive UI that adapts to window size</li>
+				<li>Loading a music library from a specified directory, automatically saving library data and album
+					art to a cache for quicker subsequent loading times</li>
+				<li>Asynchronous scanning of file metadata to obtain track information and album art, updating the
+					cache when new files have been added or when files have been updated/deleted</li>
+				<li>Settings to assign custom keybinds, change the library directory, reload library and rebuild
+					caches</li>
+			</ul>
+		</p>
+		<p class="left">
+			Technologies used:
+			<ul>
+				<li>C# and XAML</li>
+				<li>Windows Presentation Foundation (WPF)</li>
+				<li>Visual Studio</li>
+				<li>.NET packages: NAudio, SoundTouch.Net, TagLibSharp, Newtonsoft.Json</li>
+				<li>MSTest for unit and integration testing</li>
+			</ul>
+		</p>
+	</div>
+	<div class="project-media">
+		<video class="project-image" autoplay muted loop controls>
+			<source src="/assets/images/bluelime.mp4" type="video/mp4">
+		</video>
+		<p class="image-text">A short video showcasing the UI and demonstrating behaviour when artists/albums are clicked</p>
+	</div>
 </div>
 
-<script>
+<hr>
 
-    var container = document.querySelector("#unity-container");
-    var canvas = document.querySelector("#unity-canvas");
-    var loadingBar = document.querySelector("#unity-loading-bar");
-    var progressBarFull = document.querySelector("#unity-progress-bar-full");
-    var unityFooter = document.querySelector("#unity-footer");
-    var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-    var warningBanner = document.querySelector("#unity-warning");
+<div class="project-container">
+	<div class="project-text">
+		<h2>Ultex (2023-2025)</h2>
+		<p>Ultex is a 2D space shooter game.</p>
+		<p class="left">When I started this project, I had no experience using the language (C#) or the framework (Unity).
+			The idea was to teach myself something new while also exploring a passion of mine.
+			Development was started in 2023 and finished in 2025, although this was intermittent and the
+			project was not being actively worked on for most of 2024.</p>
+		<p class="left">
+			Technologies used:
+			<ul>
+				<li>C# and Unity</li>
+				<li>Aseprite for sprites/animations/background</li>
+				<li>Reaper for music and sound effects</li>
+			</ul>
+		</p>
+		<p><a href="{{ '/ultex/' | relative_url }}">Click here to play Ultex in your browser</a></p>
+	</div>
+	<div class="project-media">
+		<div class="video-wrapper">
+			<iframe class="project-video" title="Ultex trailer" src="https://www.youtube.com/embed/azRGBmhGHIw?si=_ia0j4osF1WjJVbm" allowfullscreen></iframe>
+		</div>
+		<p class="image-text">The gameplay trailer for Ultex</p>
+	</div>
+</div>
 
-    // Shows a temporary message banner/ribbon for a few seconds, or
-    // a permanent error message on top of the canvas if type=='error'.
-    // If type=='warning', a yellow highlight color is used.
-    // Modify or remove this function to customize the visually presented
-    // way that non-critical warnings and error messages are presented to the
-    // user.
-    function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-            warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-            if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-            setTimeout(function() {
-                warningBanner.removeChild(div);
-                updateBannerVisibility();
-            }, 5000);
-        }
-        updateBannerVisibility();
-    }
+<hr>
 
-    var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/Ultex.loader.js";
-    var config = {
-        dataUrl: buildUrl + "/Ultex.data",
-        frameworkUrl: buildUrl + "/Ultex.framework.js",
-        codeUrl: buildUrl + "/Ultex.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "Lewis Hay",
-        productName: "Ultex",
-        productVersion: "1.0",
-        showBanner: unityShowBanner,
-    };
+<div class="purple">
+	<div class="project-container slim-wrapper">
+		<div class="project-text">
+			<h2>RandoChoice (2021-2022)</h2>
+			<p>RandoChoice is an Android app which will pick a random option from a list of choices.</p>
+			<p class="left">I became interested in developing an Android app as I liked the idea of creating something
+				that I could install and use on my phone. The recommended language for Android development is Kotlin
+				which appealed to me as it was similar to other languages I knew at the time, so this project allowed
+				me to explore a new language without a steep learning curve.</p>
+			<p class="left">
+				Features include:
+				<ul>
+					<li>Input a list of choices to be randomly selected from</li>
+					<li>Save, load, and delete lists from local storage</li>
+				</ul>
+			</p>
+			<p class="left">
+				Technologies used:
+				<ul>
+					<li>Kotlin</li>
+					<li>Gradle</li>
+					<li>Android Studio</li>
+				</ul>
+			</p>
+		</div>
+		<div class="project-media slim">
+			<img class="project-image" src="/assets/images/randochoice.gif" alt="RandoChoice android app example">
+			<p class="image-text">A short gif to demonstrate the app making a choice</p>
+		</div>
+	</div>
+</div>
 
-    // By default Unity keeps WebGL canvas render target size matched with
-    // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-    // Set this to false if you want to decouple this synchronization from
-    // happening inside the engine, and you would instead like to size up
-    // the canvas DOM size and WebGL render target sizes yourself.
-    // config.matchWebGLToCanvasSize = false;
+<hr>
 
-    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile devices not supported, hide canvas and show error text
-        var heading = document.createElement("h1");
-        var headingText = document.createTextNode("Mobile devices are not supported!");
-        var para = document.createElement("p");
-        var paraText = document.createTextNode("Ultex cannot be played on a mobile device.");
-        heading.appendChild(headingText);
-        para.appendChild(paraText);
-        container.appendChild(heading);
-        container.appendChild(para);
-        canvas.style.display = "none";
-        unityFooter.style.display = "none";
+<div class="project-container blue">
+	<div class="project-text">
+		<h2>Smaller miscellaneous projects & experience</h2>
+		<p class="left">
+			<ul class="spaced-list">
+				<li>A monitoring dashboard for a team I worked with, written in Scala and using the Play framework,
+					which interacted with DevOps APIs (Jenkins) to pull back health status of build and deployment
+					jobs, and service versions per environment</li>
+				<li>Various browser userscripts written in Javascript that modify or improve a website. Use cases
+					include: widening content to fit better on a 16:9 screen, adding buttons to autofill data,
+					customising colours or images, hiding content</li>
+				<li>A simple Discord bot written initially in Javascript (2017) and then reworked in Scala (2025).
+					This bot was added to a server and was able to respond to basic commands</li>
+				<li>This website!</li>
+			</ul>
+		</p>
+	</div>
+	<div class="project-media">
+		<img class="project-image" src="/assets/images/scala-dashing.png" alt="Scala Play monitoring dashboard">
+		<p class="image-text">A screenshot of the Scala Play monitoring dashboard running in a browser</p>
+	</div>
+</div>
 
-    } else {
-        // Set height to 84% of browser window height (excluding toolbars etc), then calc width based on that to maintain 16:9 resolution
-        var canvasHeight = window.innerHeight * 0.82;
-        var canvasWidth = canvasHeight * (16/9);
-        canvas.style.width = canvasWidth.toString() + "px";
-        canvas.style.height = canvasHeight.toString() + "px";
-        unityFooter.style.width = canvasWidth.toString() + "px";
-    }
-
-    loadingBar.style.display = "block";
-
-    var script = document.createElement("script");
-    script.src = loaderUrl;
-    script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-            progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-            loadingBar.style.display = "none";
-            fullscreenButton.onclick = () => {
-                unityInstance.SetFullscreen(1);
-            };
-        }).catch((message) => {
-            alert(message);
-        });
-    };
-
-    document.body.appendChild(script);
-
-</script>
+<hr>
