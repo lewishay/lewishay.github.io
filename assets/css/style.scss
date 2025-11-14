@@ -176,7 +176,7 @@ p.left {
   margin-bottom: 15px;
 }
 
-/* Responsive: stack on smaller screens */
+/* Responsive: for smaller screens & mobile */
 @media (max-width: 1200px) {
   .project-container {
     flex-direction: column;
@@ -196,11 +196,14 @@ p.left {
   .project-image {
     max-width: 90%;
   }
+
+  ul {
+    padding-left: 10px;
+  }
 }
 
 footer {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px;
   position: static;
 }
 
