@@ -52,6 +52,22 @@ p.left {
   background-size: 100% 100%;
 }
 
+.green-blocks-135 {
+    background: linear-gradient(135deg,
+        rgba(42, 142, 106, 1) 0% 10%,
+        rgba(40, 137, 101, 1) 10% 20%,
+        rgba(38, 132, 96, 1) 20% 30%,
+        rgba(36, 127, 91, 1) 30% 40%,
+        rgba(34, 122, 86, 1) 40% 50%,
+        rgba(32, 117, 81, 1) 50% 60%,
+        rgba(30, 112, 76, 1) 60% 70%,
+        rgba(28, 107, 71, 1) 70% 80%,
+        rgba(26, 102, 66, 1) 80% 90%,
+        rgba(24, 97, 61, 1) 90% 100%
+    );
+    background-size: 100% 100%;
+}
+
 .blue-blocks-45 {
   background: linear-gradient(45deg,
           rgba(49, 107, 163, 1) 0% 10%,
@@ -82,6 +98,22 @@ p.left {
           rgba(22, 62, 118, 1) 90% 100%
   );
   background-size: 100% 100%;
+}
+
+.purple-blocks-45 {
+    background: linear-gradient(45deg,
+        rgba(91, 96, 167, 1) 0% 10%, 
+        rgba(88, 89, 162, 1) 10% 20%,
+        rgba(86, 82, 157, 1) 20% 30%,
+        rgba(83, 77, 152, 1) 30% 40%,
+        rgba(81, 70, 147, 1) 40% 50%,
+        rgba(78, 63, 142, 1) 50% 60%,
+        rgba(76, 56, 137, 1) 60% 70%,
+        rgba(73, 49, 132, 1) 70% 80%,
+        rgba(71, 42, 127, 1) 80% 90%,
+        rgba(68, 35, 122, 1) 90% 100%
+    );
+    background-size: 100% 100%;
 }
 
 .purple-blocks-135 {
