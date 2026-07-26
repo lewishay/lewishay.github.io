@@ -3,6 +3,7 @@ layout: mainTemplate
 ---
 <nav>
     <ul>
+        <li id="crystalcavern" onclick="show('crystalcavern')"><button><img src="/assets/images/crystal-cavern.png">Crystal Cavern</button></li>
         <li id="bluelime" onclick="show('bluelime')"><button><img src="/assets/images/icon-bluelime.ico">BlueLime</button></li>
         <li id="springview" onclick="show('springview')"><button><img src="/assets/images/icon-springview.ico">SpringView</button></li>
         <li id="ultex" onclick="show('ultex')"><button><img src="/assets/images/icon-ultex.png">Ultex</button></li>
@@ -11,6 +12,33 @@ layout: mainTemplate
         <li id="miscellaneous" onclick="show('miscellaneous')"><button><img src="/assets/images/icon-misc.ico">Miscellaneous</button></li>
     </ul>
 </nav>
+
+<section id="content-crystalcavern" class="text-reveal">
+    <div class="project-text">
+        <h2>Crystal Cavern</h2>
+        <p>Crystal Cavern is a reverb audio plugin (VST) for Windows and MacOS.</p>
+        <p>
+            There are four self-explanatory controls to tweak the behaviour of the reverb - Decay, Low cut, High cut and Mix.
+            In addition, there are three tonal options, which offer subtle tweaks to the character of the reverb.
+        </p>
+        <p>
+            Technologies used:
+            <ul>
+                <li>C++</li>
+                <li>CMake</li>
+                <li>JUCE</li>
+                <li>Aseprite for some of the graphics</li>
+            </ul>
+        </p>
+        <p>Development period: 2026</p>
+        <p class="link-text"><a href="{{ '/crystal-cavern-win' | relative_url }}">Download for Windows</a></p>
+        <p class="link-text"><a href="{{ '/crystal-cavern-mac' | relative_url }}">Download for MacOS</a></p>
+    </div>
+    <div class="project-media">
+        <iframe class="project-video" title="Crystal Cavern demo" srcdoc="<h2> <<< Video coming soon >>> </h2>" allowfullscreen></iframe>
+        <p class="image-text">A video demonstrating the sound of the plugin</p>
+    </div>
+</section>
 
 <section id="content-bluelime" class="text-reveal">
     <div class="project-text">
@@ -117,7 +145,7 @@ layout: mainTemplate
             </ul>
         </p>
         <p>Development period: 2023 - 2025</p>
-        <p class="desktop-only"><a class="large-link" href="{{ '/ultex' | relative_url }}">Click here to play Ultex</a></p>
+        <p class="desktop-only link-text"><a href="{{ '/ultex' | relative_url }}">Click here to play Ultex</a></p>
     </div>
     <div class="project-media">
         <iframe class="project-video" title="Ultex trailer" src="https://www.youtube.com/embed/azRGBmhGHIw?si=_ia0j4osF1WjJVbm" allowfullscreen></iframe>
