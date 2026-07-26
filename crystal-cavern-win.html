@@ -1,0 +1,19 @@
+---
+layout: mainTemplate
+---
+<div class="full-width-container">
+    <h2>Download Crystal Cavern for Windows</h2>
+    <p>
+        If your download doesn't start automatically,
+        <a href="{{ '/assets/downloads/Crystal Cavern.vst3' | relative_url }}">click here</a>.
+    </p>
+    <p class="return-home-link"><a href="{{ '/' | relative_url }}">Return to the homepage</a></p>
+</div>
+
+<script>
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            window.location.replace("{{ '/assets/downloads/Crystal Cavern.vst3' | relative_url }}");
+        }, 1000);
+    });
+</script>
