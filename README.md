@@ -1,6 +1,9 @@
 # lewishay.github.io
 
-This Github Pages site hosts a portfolio of my personal development projects, as well as a playable WebGL build of my 2D shmup game Ultex.
+This Github Pages site hosts:
+- a portfolio of my personal development projects
+- downloads for some of the software that I've made
+- a playable WebGL build of my 2D shmup game Ultex
 
 The site can be run locally via the command `bundle exec jekyll serve`
 
