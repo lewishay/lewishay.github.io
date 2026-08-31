@@ -16,6 +16,10 @@ function show(project) {
     }
 
     var selectedContainer = document.getElementById("content-" + project);
+    const iframe = selectedContainer.querySelector('iframe');
+    if (iframe && !iframe.src) {
+        iframe.src = iframe.dataset.src; // lazy setting of src, prevents yt thumbnails in hidden iframes from being blurry
+    }
     selectedContainer.style.display = "flex";
     var selectedListItem = document.getElementById(project);
     selectedListItem.classList.add("clicked");
