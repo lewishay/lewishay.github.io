@@ -1,8 +1,7 @@
 addEventListener("DOMContentLoaded", (event) => { 
     var containers = document.getElementsByTagName("section");
-    containers[0].style.display = "flex";
-    var listItems = document.getElementsByTagName("li");
-    listItems[0].classList.add("clicked");
+    var firstProjectId = containers[0].id.replace("content-", "");
+    show(firstProjectId);
 })
 
 function show(project) {
